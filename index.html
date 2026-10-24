@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a0d1b">
+    <meta name="description" content="CareerIQ career and skill intelligence dashboard prototype.">
+    <title>CareerIQ — Career Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" aria-label="CareerIQ home" data-page-link="landing">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span>career<span class="brand-iq">IQ</span></span>
+        </a>
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-page="overview"><span class="nav-icon">◫</span>Overview</button>
+          <button class="nav-item" data-page="assessment"><span class="nav-icon">◉</span>Career assessment</button>
+          <button class="nav-item" data-page="careers"><span class="nav-icon">⌕</span>Explore careers</button>
+          <button class="nav-item" data-page="skills"><span class="nav-icon">⌁</span>My skills <span class="nav-count">4</span></button>
+          <button class="nav-item" data-page="roadmap"><span class="nav-icon">◎</span>Learning roadmap</button>
+          <button class="nav-item" data-page="projects"><span class="nav-icon">▧</span>Project hub</button>
+          <button class="nav-item" data-page="jobs"><span class="nav-icon">↗</span>Jobs & internships</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="sidebar-help">
+            <div class="help-orb">✦</div>
+            <div><strong>Need a little direction?</strong><p>Your next step is just one click away.</p></div>
+            <button class="help-link" data-page="roadmap" aria-label="Open your roadmap">↗</button>
+          </div>
+          <button class="nav-item" data-page="profile"><span class="nav-icon">⚙</span>Settings</button>
+          <div class="sidebar-profile">
+            <div class="avatar avatar-small">AM</div>
+            <div class="user-copy"><strong>Alex Morgan</strong><span>Student account</span></div>
+            <button class="more-button" aria-label="More account options">···</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button class="icon-button mobile-menu" id="menu-toggle" aria-label="Open navigation">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="breadcrumb-current">Overview</strong></div>
+          <div class="topbar-actions">
+            <span class="today-label"><span class="live-dot"></span> Your career journey, in focus</span>
+            <button class="icon-button notification-button" aria-label="Notifications"><span>♧</span><i></i></button>
+            <button class="top-avatar" data-page="profile" aria-label="Open profile">AM</button>
+          </div>
+        </header>
+
+        <div class="page-content">
+          <section class="page-view landing-view active" id="page-landing" aria-labelledby="landing-heading">
+            <header class="landing-nav">
+              <a class="brand" href="#" data-page-link="landing" aria-label="CareerIQ home">
+                <span class="brand-mark"><span></span><span></span><span></span></span>
+                <span>career<span class="brand-iq">IQ</span></span>
+              </a>
+              <nav aria-label="Landing page navigation"><a href="#landing-how">How it works</a><a href="#landing-careers">Explore careers</a><button class="button button-secondary" data-page="overview">Log in</button><button class="button button-primary" data-page="assessment">Get started <span>→</span></button></nav>
+            </header>
+            <div class="landing-hero">
+              <div class="landing-copy">
+                <div class="eyebrow"><span class="eyebrow-star">✦</span> YOUR FUTURE ISN’T ONE-SIZE-FITS-ALL</div>
+                <h1 id="landing-heading">Discover your strengths.<br><span>Build a future</span> that fits.</h1>
+                <p>Get to know what you’re good at, explore careers that make sense for you, and take the next step at your own pace.</p>
+                <div class="landing-actions"><button class="button button-primary" data-page="assessment">Start your free assessment <span>→</span></button><button class="landing-link" data-page="overview">Explore the dashboard <span>↗</span></button></div>
+                <div class="landing-proof"><div class="proof-avatars"><i>J</i><i>M</i><i>A</i></div><span>Designed for your journey, not someone else’s.</span></div>
+              </div>
+              <div class="landing-art" aria-label="Illustration of career readiness progress">
+                <div class="landing-glow"></div><div class="landing-orbit landing-orbit-one"></div><div class="landing-orbit landing-orbit-two"></div>
+                <div class="landing-mini-card landing-match"><span class="landing-card-icon">⌘</span><span><small>YOUR TOP CAREER MATCH</small><strong>Software Developer</strong></span><b>87%</b></div>
+                <div class="landing-visual-score"><span class="visual-star">✦</span><small>YOUR READINESS</small><strong>68<em>/100</em></strong><div class="visual-score-track"><i></i></div><span class="visual-score-note">One step at a time <b>↗</b></span></div>
+                <div class="landing-mini-card landing-skill"><span class="skill-mini-icon">⌁</span><span><small>GROWING SKILL</small><strong>Problem solving</strong><i class="landing-skill-track"><b></b></i></span><span class="skill-growth">+12%</span></div>
+                <span class="landing-star star-a">✧</span><span class="landing-star star-b">✦</span>
+              </div>
+            </div>
+            <div class="landing-trust"><span>MADE FOR THE JOURNEY FROM</span><strong>“I’m not sure yet”</strong><i>→</i><strong>“I know what to try next”</strong><span class="trust-note">A thoughtful starting point for students.</span></div>
+            <section class="landing-section" id="landing-how">
+              <div class="landing-section-title"><div class="eyebrow">A CLEARER WAY FORWARD</div><h2>Your next step doesn’t have to be a giant leap.</h2><p>CareerIQ helps turn big questions into small, useful actions.</p></div>
+              <div class="landing-steps">
+                <article class="landing-step"><span class="step-number">01</span><span class="step-icon purple-icon">◉</span><h3>Get to know yourself</h3><p>Explore your interests, strengths, and the way you like to work.</p></article>
+                <article class="landing-step"><span class="step-number">02</span><span class="step-icon blue-icon">⌕</span><h3>Find paths that fit</h3><p>See career ideas with clear explanations of why they may suit you.</p></article>
+                <article class="landing-step"><span class="step-number">03</span><span class="step-icon mint-icon">◎</span><h3>Make progress your way</h3><p>Build skills with a flexible roadmap and practical projects.</p></article>
+              </div>
+            </section>
+            <section class="landing-careers" id="landing-careers"><div><div class="eyebrow">ROOM TO EXPLORE</div><h2>There’s more than one good path.</h2><p>Start with what interests you. The right direction can take shape as you go.</p></div><div class="landing-career-chips"><span>⌘ &nbsp; Software development</span><span>◫ &nbsp; Data & analytics</span><span>✳ &nbsp; Design & experience</span><span>↗ &nbsp; And more to discover</span></div></section>
+            <section class="landing-cta"><div><span class="eyebrow">START WHERE YOU ARE</span><h2>Your future is yours to figure out.</h2><p>Take a few minutes to reflect, then see where your curiosity takes you.</p></div><button class="button button-primary" data-page="assessment">Take the assessment <span>→</span></button></section>
+            <footer class="landing-footer"><a class="brand" href="#" data-page-link="landing"><span class="brand-mark"><span></span><span></span><span></span></span><span>career<span class="brand-iq">IQ</span></span></a><span>Discover your strengths. Build your skills. Shape your future.</span><span>UI prototype · Sample content</span></footer>
+          </section>
+
+          <section class="page-view" id="page-overview" aria-labelledby="welcome-heading">
+            <div class="welcome-row">
+              <div>
+                <div class="eyebrow"><span class="eyebrow-star">✦</span> YOUR CAREER, WITH CLARITY</div>
+                <h1 id="welcome-heading">Good morning, Alex <span class="wave">✳</span></h1>
+                <p class="subheading">Small steps today. A future that feels like yours.</p>
+              </div>
+              <button class="button button-primary" data-page="assessment"><span>✦</span> Continue assessment <span class="button-arrow">→</span></button>
+            </div>
+
+            <div class="hero-card">
+              <div class="hero-content">
+                <div class="hero-kicker"><span class="sparkle">✧</span> YOUR CAREER READINESS</div>
+                <div class="score-line"><span class="hero-score">68</span><span class="score-total">/ 100</span><span class="score-change">↗ 8% <small>this month</small></span></div>
+                <h2>You’re building real momentum.</h2>
+                <p>Your skills are taking shape. A little more practice in data structures could bring your top match within reach.</p>
+                <button class="button button-glass" data-page="skills">See your skill gaps <span>→</span></button>
+              </div>
+              <div class="hero-visual" aria-label="Readiness score 68 out of 100">
+                <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+                <div class="score-ring"><div class="ring-inner"><span>68</span><small>READINESS</small></div></div>
+                <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span>
+                <div class="ring-caption"><span class="live-dot"></span> On your way</div>
+              </div>
+              <div class="hero-decoration"></div>
+            </div>
+            <p class="disclaimer">Readiness is a learning progress indicator based on your self-reported skills and activity — not a prediction of employment.</p>
+
+            <div class="section-heading">
+              <div><h2>Your progress at a glance</h2><p>A few signals to help you choose what’s next.</p></div>
+              <button class="text-button" data-page="profile">View profile <span>↗</span></button>
+            </div>
+            <div class="stats-grid">
+              <article class="stat-card">
+                <div class="stat-top"><span class="stat-icon purple-icon">⌁</span><span class="stat-trend">+2 this month</span></div>
+                <div class="stat-value">12<span class="stat-unit"> skills</span></div><p>Skills in your toolkit</p>
+                <div class="mini-bars"><i style="height:36%"></i><i style="height:48%"></i><i style="height:41%"></i><i style="height:63%"></i><i style="height:58%"></i><i style="height:78%"></i><i style="height:92%"></i></div>
+              </article>
+              <article class="stat-card">
+                <div class="stat-top"><span class="stat-icon blue-icon">◎</span><span class="stat-trend">Top match</span></div>
+                <div class="stat-value">87<span class="stat-unit">%</span></div><p>Software developer match</p>
+                <div class="match-meter"><span style="width:87%"></span></div><div class="meter-labels"><span>Good fit</span><span>87 / 100</span></div>
+              </article>
+              <article class="stat-card">
+                <div class="stat-top"><span class="stat-icon mint-icon">◷</span><span class="stat-trend">This week</span></div>
+                <div class="stat-value">6.5<span class="stat-unit"> hrs</span></div><p>Time invested in learning</p>
+                <div class="activity-bars"><i style="height:34%"></i><i style="height:72%"></i><i style="height:49%"></i><i style="height:91%"></i><i style="height:63%"></i><i style="height:42%"></i><i style="height:78%"></i></div>
+              </article>
+              <article class="stat-card">
+                <div class="stat-top"><span class="stat-icon amber-icon">✦</span><span class="stat-trend">Keep it up</span></div>
+                <div class="stat-value">3<span class="stat-unit"> / 8</span></div><p>Roadmap milestones done</p>
+                <div class="milestone-dots"><i class="done"></i><i class="done"></i><i class="done"></i><i></i><i></i><i></i><i></i><i></i><span>38% complete</span></div>
+              </article>
+            </div>
+
+            <div class="dashboard-columns">
+              <article class="panel career-panel">
+                <div class="panel-heading"><div><h2>Careers that fit you</h2><p>Based on your skills, interests & assessment</p></div><button class="text-button" data-page="careers">Explore all <span>→</span></button></div>
+                <div class="career-list">
+                  <button class="career-row" data-page="careers"><span class="career-symbol symbol-violet">⌘</span><span class="career-info"><strong>Software Developer</strong><small>Build products people love</small></span><span class="career-match"><strong>87%</strong><small>match</small></span><span class="row-arrow">↗</span></button>
+                  <button class="career-row" data-page="careers"><span class="career-symbol symbol-blue">◫</span><span class="career-info"><strong>Data Analyst</strong><small>Find the story in data</small></span><span class="career-match"><strong>79%</strong><small>match</small></span><span class="row-arrow">↗</span></button>
+                  <button class="career-row" data-page="careers"><span class="career-symbol symbol-pink">✳</span><span class="career-info"><strong>UX Designer</strong><small>Make technology feel human</small></span><span class="career-match"><strong>74%</strong><small>match</small></span><span class="row-arrow">↗</span></button>
+                </div>
+                <div class="sample-note">Illustrative sample recommendations · scores update from your assessment and profile</div>
+              </article>
+
+              <article class="panel focus-panel">
+                <div class="panel-heading"><div><h2>Your next best step</h2><p>One small action, meaningful progress.</p></div><span class="focus-icon">✧</span></div>
+                <div class="focus-card">
+                  <div class="focus-tag">SKILL TO STRENGTHEN</div>
+                  <h3>Data Structures</h3>
+                  <p>It’s the biggest opportunity to improve your software developer match.</p>
+                  <div class="skill-progress"><div class="progress-label"><span>Your level <b>45%</b></span><span>Target <b>80%</b></span></div><div class="progress-track"><i style="width:45%"></i><span style="left:80%"></span></div></div>
+                  <button class="button button-primary button-wide" data-page="roadmap">View learning steps <span>→</span></button>
+                </div>
+              </article>
+            </div>
+
+            <div class="bottom-columns">
+              <article class="panel roadmap-preview">
+                <div class="panel-heading"><div><h2>Keep your learning in motion</h2><p>Software Developer · Week 4 of 8</p></div><button class="text-button" data-page="roadmap">Full roadmap <span>→</span></button></div>
+                <div class="roadmap-progress"><div class="roadmap-progress-track"><span style="width:38%"></span></div><strong>38%</strong></div>
+                <div class="next-task"><div class="task-check">✓</div><div><small>UP NEXT · EST. 45 MIN</small><strong>Practice array and string problems</strong></div><button class="round-arrow" data-page="roadmap" aria-label="Open roadmap">→</button></div>
+              </article>
+              <article class="panel activity-panel">
+                <div class="panel-heading"><div><h2>Learning rhythm</h2><p>Your activity over the last 7 days</p></div><span class="range-label">This week⌄</span></div>
+                <div class="chart" aria-label="Weekly learning activity chart">
+                  <div class="chart-y"><span>3h</span><span>2h</span><span>1h</span><span>0</span></div>
+                  <div class="chart-plot"><div class="chart-grid"><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 420 120" preserveAspectRatio="none" role="img" aria-label="Activity trend rising through the week"><defs><linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#9d81ff" stop-opacity=".25"/><stop offset="1" stop-color="#9d81ff" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M0,91 C24,88 35,75 60,80 S91,66 120,72 S151,38 180,58 S213,66 240,43 S271,53 300,30 S330,46 360,24 S392,28 420,12 L420,120 L0,120 Z"/><path class="chart-line" d="M0,91 C24,88 35,75 60,80 S91,66 120,72 S151,38 180,58 S213,66 240,43 S271,53 300,30 S330,46 360,24 S392,28 420,12"/></svg><div class="chart-x"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div>
+                </div>
+              </article>
+            </div>
+            <footer class="page-footer">CareerIQ <span>·</span> A clearer path starts with you.</footer>
+          </section>
+
+          <section class="page-view" id="page-assessment" aria-labelledby="assessment-heading">
+            <div class="page-title-row"><div><div class="eyebrow">KNOW YOURSELF, THEN GROW</div><h1 id="assessment-heading">Career assessment</h1><p class="subheading">Explore what energizes you and where your strengths show up.</p></div><span class="pill pill-live"><i></i> Saves as you go</span></div>
+            <div class="assessment-layout">
+              <article class="panel assessment-main">
+                <div class="assessment-top"><span class="step-label">QUESTION <b id="question-number">01</b> <span>/ 08</span></span><span class="step-category" id="question-category">Problem solving</span></div>
+                <div class="assessment-progress"><span id="assessment-progress-fill"></span></div>
+                <h2 id="question-title">When you come across a tricky problem, what do you usually do first?</h2>
+                <div class="answer-list" id="answer-list">
+                  <button class="answer-option"><span class="answer-letter">A</span><span>Break it into smaller pieces and tackle them one by one</span><span class="answer-check">✓</span></button>
+                  <button class="answer-option"><span class="answer-letter">B</span><span>Look for patterns or similar problems I’ve solved before</span><span class="answer-check">✓</span></button>
+                  <button class="answer-option"><span class="answer-letter">C</span><span>Talk it through with someone and get a fresh perspective</span><span class="answer-check">✓</span></button>
+                  <button class="answer-option"><span class="answer-letter">D</span><span>Try a few different approaches and see what works</span><span class="answer-check">✓</span></button>
+                </div>
+                <div class="assessment-controls"><button class="button button-quiet" id="previous-question">← Previous</button><span class="autosave-label"><i></i> Your progress is saved</span><button class="button button-primary" id="next-question">Next question <span>→</span></button></div>
+              </article>
+              <aside class="assessment-aside">
+                <article class="panel assessment-tip"><span class="tip-sparkle">✧</span><div class="eyebrow">A NOTE FOR YOU</div><h3>There are no wrong answers.</h3><p>This isn’t a test. The most useful answer is the one that feels most like you on an ordinary day.</p></article>
+                <article class="panel assessment-progress-card"><div class="panel-heading"><h3>Your progress</h3><strong id="assessment-percent">12%</strong></div><div class="progress-track"><i id="assessment-mini-fill" style="width:12%"></i></div><p><span id="answered-count">1</span> of 8 questions answered</p><div class="assessment-category-list"><span><i class="category-dot dot-purple"></i>Strengths & problem solving</span><span><i class="category-dot dot-blue"></i>Interests & motivation</span><span><i class="category-dot dot-pink"></i>Work style & environment</span></div></article>
+              </aside>
+            </div>
+          </section>
+
+          <section class="page-view" id="page-careers" aria-labelledby="careers-heading">
+            <div class="page-title-row"><div><div class="eyebrow">POSSIBILITY, WITH A PLAN</div><h1 id="careers-heading">Explore careers</h1><p class="subheading">Discover paths that connect your interests to real-world work.</p></div><span class="pill">✦ 3 personalized matches</span></div>
+            <div class="panel careers-toolbar"><label class="search-box"><span>⌕</span><input id="career-search" type="search" placeholder="Search careers or skills..." aria-label="Search careers"></label><select id="career-filter" aria-label="Filter careers"><option value="all">All career areas</option><option value="technology">Technology</option><option value="design">Design</option><option value="data">Data & analytics</option></select><button class="filter-button">☷ <span>Filters</span></button></div>
+            <div class="career-cards" id="career-cards">
+              <article class="panel career-card" data-category="technology" data-search="software developer coding technology javascript problem solving">
+                <div class="career-card-top"><span class="career-symbol symbol-violet">⌘</span><span class="match-badge">87% match</span></div><div class="career-area">TECHNOLOGY</div><h2>Software Developer</h2><p>Turn ideas into useful digital experiences. Build, test, and improve the software people use every day.</p><div class="fit-reason"><span>✦</span> Why it fits: problem-solving + creativity</div><div class="tag-list"><span>JavaScript</span><span>Problem solving</span><span>Teamwork</span></div><div class="career-card-footer"><span><b>4</b> skills to grow</span><button class="button button-secondary" data-toast="Career details are part of this UI prototype.">Explore career <span>→</span></button></div>
+              </article>
+              <article class="panel career-card" data-category="data" data-search="data analyst analytics sql critical thinking data">
+                <div class="career-card-top"><span class="career-symbol symbol-blue">◫</span><span class="match-badge">79% match</span></div><div class="career-area">DATA & ANALYTICS</div><h2>Data Analyst</h2><p>Find meaningful patterns in data and help teams make thoughtful, evidence-based decisions.</p><div class="fit-reason"><span>✦</span> Why it fits: curiosity + critical thinking</div><div class="tag-list"><span>SQL</span><span>Data visualization</span><span>Communication</span></div><div class="career-card-footer"><span><b>3</b> skills to grow</span><button class="button button-secondary" data-toast="Career details are part of this UI prototype.">Explore career <span>→</span></button></div>
+              </article>
+              <article class="panel career-card" data-category="design" data-search="ux designer design empathy creativity research">
+                <div class="career-card-top"><span class="career-symbol symbol-pink">✳</span><span class="match-badge">74% match</span></div><div class="career-area">DESIGN & EXPERIENCE</div><h2>UX Designer</h2><p>Make digital products easier and more enjoyable by understanding people and shaping how things work.</p><div class="fit-reason"><span>✦</span> Why it fits: empathy + creative thinking</div><div class="tag-list"><span>Prototyping</span><span>User research</span><span>Visual design</span></div><div class="career-card-footer"><span><b>5</b> skills to grow</span><button class="button button-secondary" data-toast="Career details are part of this UI prototype.">Explore career <span>→</span></button></div>
+              </article>
+            </div>
+            <div class="sample-banner">Sample recommendations for the prototype. Match scores are illustrative and should not be treated as validated career predictions.</div>
+          </section>
+
+          <section class="page-view" id="page-skills" aria-labelledby="skills-heading">
+            <div class="page-title-row"><div><div class="eyebrow">YOUR GROWTH, MADE VISIBLE</div><h1 id="skills-heading">Skill intelligence</h1><p class="subheading">See what you already bring — and what could open the next door.</p></div><button class="button button-primary" data-toast="Add skill is a visual prototype action.">＋ Add a skill</button></div>
+            <div class="skills-summary">
+              <article class="panel skills-score-card"><span class="stat-icon purple-icon">⌁</span><div><span class="summary-label">SKILLS IN YOUR TOOLKIT</span><strong>12</strong><small>Across technical and people skills</small></div></article>
+              <article class="panel skills-score-card"><span class="stat-icon blue-icon">↗</span><div><span class="summary-label">CLOSE TO YOUR TARGET</span><strong>5 <small>skills</small></strong><small>Within 15 points of your goal</small></div></article>
+              <article class="panel skills-score-card"><span class="stat-icon amber-icon">✧</span><div><span class="summary-label">GREATEST OPPORTUNITY</span><strong class="smaller-strong">Data Structures</strong><small>35 points from target level</small></div></article>
+            </div>
+            <div class="panel skill-table-panel">
+              <div class="panel-heading"><div><h2>Your skills & growth areas</h2><p>Compared with your Software Developer career goal</p></div><select class="compact-select" aria-label="Career target"><option>Software Developer</option><option>Data Analyst</option></select></div>
+              <div class="skill-table-wrap"><table class="skill-table"><thead><tr><th>SKILL</th><th>YOUR LEVEL</th><th>CAREER TARGET</th><th>GAP</th><th>STATUS</th></tr></thead><tbody>
+                <tr><td><span class="table-skill-icon skill-js">JS</span><span class="skill-name">JavaScript</span></td><td><div class="level-cell"><span>72%</span><i><b style="width:72%"></b></i></div></td><td>80%</td><td class="gap-low">−8</td><td><span class="status-pill status-close">Nearly there</span></td></tr>
+                <tr><td><span class="table-skill-icon skill-ds">DS</span><span class="skill-name">Data Structures</span></td><td><div class="level-cell"><span>45%</span><i><b style="width:45%"></b></i></div></td><td>80%</td><td class="gap-high">−35</td><td><span class="status-pill status-focus">Focus area</span></td></tr>
+                <tr><td><span class="table-skill-icon skill-sql">SQ</span><span class="skill-name">SQL</span></td><td><div class="level-cell"><span>58%</span><i><b style="width:58%"></b></i></div></td><td>70%</td><td class="gap-mid">−12</td><td><span class="status-pill status-growing">Growing</span></td></tr>
+                <tr><td><span class="table-skill-icon skill-git">G</span><span class="skill-name">Git & GitHub</span></td><td><div class="level-cell"><span>68%</span><i><b style="width:68%"></b></i></div></td><td>75%</td><td class="gap-low">−7</td><td><span class="status-pill status-close">Nearly there</span></td></tr>
+                <tr><td><span class="table-skill-icon skill-com">✦</span><span class="skill-name">Communication</span></td><td><div class="level-cell"><span>76%</span><i><b style="width:76%"></b></i></div></td><td>75%</td><td class="gap-positive">+1</td><td><span class="status-pill status-strong">A strength</span></td></tr>
+              </tbody></table></div><p class="table-footnote">Levels are self-reported in this prototype. Targets are illustrative examples, not formal industry standards.</p>
+            </div>
+          </section>
+
+          <section class="page-view" id="page-roadmap" aria-labelledby="roadmap-heading">
+            <div class="page-title-row"><div><div class="eyebrow">ONE STEP AT A TIME</div><h1 id="roadmap-heading">Your learning roadmap</h1><p class="subheading">A flexible path to grow toward Software Developer.</p></div><button class="button button-secondary" data-toast="Roadmap sharing is a visual prototype action.">↗ Share roadmap</button></div>
+            <div class="roadmap-hero panel"><div><span class="focus-tag">YOUR CURRENT PATH</span><h2>Software Developer</h2><p>8 learning milestones · About 10 weeks at your pace</p><div class="roadmap-hero-progress"><span><i style="width:38%"></i></span><b>3 of 8 complete</b></div></div><div class="roadmap-hero-score"><strong>38<span>%</span></strong><small>COMPLETED</small></div></div>
+            <div class="roadmap-list">
+              <article class="roadmap-item completed"><span class="timeline-marker">✓</span><div class="roadmap-item-body"><div class="milestone-meta"><span>MILESTONE 01</span><span>·</span><span>WEEK 1</span><span class="status-pill status-strong">Complete</span></div><h3>Build your web foundations</h3><p>Get comfortable with HTML, CSS, and how the web fits together.</p><div class="milestone-task">✓ &nbsp; Create a responsive personal webpage <span>2 sessions · 3 hrs</span></div></div></article>
+              <article class="roadmap-item completed"><span class="timeline-marker">✓</span><div class="roadmap-item-body"><div class="milestone-meta"><span>MILESTONE 02</span><span>·</span><span>WEEKS 2–3</span><span class="status-pill status-strong">Complete</span></div><h3>Make it interactive with JavaScript</h3><p>Learn the building blocks behind dynamic applications.</p><div class="milestone-task">✓ &nbsp; Build a small interactive to-do app <span>4 sessions · 5 hrs</span></div></div></article>
+              <article class="roadmap-item current"><span class="timeline-marker">03</span><div class="roadmap-item-body"><div class="milestone-meta"><span>MILESTONE 03</span><span>·</span><span>WEEK 4</span><span class="status-pill status-focus">In progress</span></div><h3>Strengthen problem-solving fundamentals</h3><p>Practice breaking problems down and choosing the right data structures.</p><button class="milestone-task task-action" data-toast="Task marked as complete in this prototype preview.">○ &nbsp; Practice array and string problems <span>45 min&nbsp; →</span></button><button class="milestone-task task-action" data-toast="Task marked as complete in this prototype preview.">○ &nbsp; Review stacks, queues, and maps <span>60 min&nbsp; →</span></button></div></article>
+              <article class="roadmap-item upcoming"><span class="timeline-marker">04</span><div class="roadmap-item-body"><div class="milestone-meta"><span>MILESTONE 04</span><span>·</span><span>WEEKS 5–6</span><span class="status-pill status-upcoming">Up next</span></div><h3>Build with React</h3><p>Turn reusable components and state into a polished user experience.</p></div></article>
+              <article class="roadmap-item upcoming"><span class="timeline-marker">05</span><div class="roadmap-item-body"><div class="milestone-meta"><span>MILESTONE 05</span><span>·</span><span>WEEKS 7–8</span><span class="status-pill status-upcoming">Coming up</span></div><h3>Connect the front end to data</h3><p>Explore APIs, databases, and the basics of building a full-stack feature.</p></div></article>
+            </div>
+          </section>
+
+          <section class="page-view" id="page-projects" aria-labelledby="projects-heading">
+            <div class="page-title-row"><div><div class="eyebrow">LEARN BY MAKING</div><h1 id="projects-heading">Project hub</h1><p class="subheading">Build practical things that make your growing skills visible.</p></div><button class="button button-primary" data-toast="Project creation is a visual prototype action.">＋ Add a project</button></div>
+            <div class="project-feature panel"><div class="feature-copy"><span class="focus-tag">RECOMMENDED FOR YOUR GOAL</span><h2>Student habit tracker</h2><p>Build a small app that helps students plan study sessions and notice their habits over time.</p><div class="tag-list"><span>React</span><span>JavaScript</span><span>UI design</span></div><button class="button button-primary" data-toast="Project details are part of this UI prototype.">View project brief <span>→</span></button></div><div class="project-art"><div class="art-window"><div class="window-dots"><i></i><i></i><i></i></div><div class="art-chart"><span style="height:35%"></span><span style="height:58%"></span><span style="height:46%"></span><span style="height:78%"></span><span style="height:61%"></span><span style="height:92%"></span></div><div class="art-lines"><i></i><i></i><i></i></div></div><div class="floating-chip">✦&nbsp; Your next portfolio piece</div></div></div>
+            <div class="section-heading"><div><h2>Project ideas for you</h2><p>Practice a skill. Finish something you can share.</p></div><span class="range-label">3 ideas</span></div>
+            <div class="project-grid">
+              <article class="panel project-card"><div class="project-card-icon project-icon-blue">▤</div><span class="difficulty">BEGINNER · 1 WEEK</span><h3>Personal portfolio</h3><p>Showcase your work and tell your story with a responsive portfolio.</p><div class="tag-list"><span>HTML & CSS</span><span>Design</span></div><button class="text-button" data-toast="Project details are part of this UI prototype.">See project brief →</button></article>
+              <article class="panel project-card"><div class="project-card-icon project-icon-purple">◷</div><span class="difficulty">BEGINNER · 1–2 WEEKS</span><h3>Study session planner</h3><p>Make a simple planner to organize tasks, breaks, and study goals.</p><div class="tag-list"><span>JavaScript</span><span>Problem solving</span></div><button class="text-button" data-toast="Project details are part of this UI prototype.">See project brief →</button></article>
+              <article class="panel project-card"><div class="project-card-icon project-icon-pink">⌕</div><span class="difficulty">GROWING · 2 WEEKS</span><h3>Campus resource finder</h3><p>Help students find useful spaces, services, or clubs around campus.</p><div class="tag-list"><span>React</span><span>Research</span></div><button class="text-button" data-toast="Project details are part of this UI prototype.">See project brief →</button></article>
+            </div>
+          </section>
+
+          <section class="page-view" id="page-jobs" aria-labelledby="jobs-heading">
+            <div class="page-title-row"><div><div class="eyebrow">YOUR NEXT OPPORTUNITY</div><h1 id="jobs-heading">Jobs & internships</h1><p class="subheading">Explore the kind of opportunity you want to work toward.</p></div><span class="pill">♡ Saved opportunities <b id="saved-count">0</b></span></div>
+            <div class="sample-banner prominent-banner"><span>ⓘ</span><div><strong>Demo opportunity cards</strong><p>These are illustrative examples, not live listings. No real openings are being advertised.</p></div><span class="sample-label">SAMPLE DATA</span></div>
+            <div class="panel careers-toolbar jobs-toolbar"><label class="search-box"><span>⌕</span><input id="job-search" type="search" placeholder="Role, skill, or company..." aria-label="Search sample opportunities"></label><select id="job-type-filter" aria-label="Filter opportunity type"><option value="all">All opportunity types</option><option value="internship">Internship</option><option value="entry">Entry level</option></select><select id="job-location-filter" aria-label="Filter by location"><option value="all">Any location</option><option value="remote">Remote</option><option value="hybrid">Hybrid</option></select></div>
+            <div class="job-list" id="job-list">
+              <article class="panel job-card" data-type="internship" data-location="hybrid" data-search="software engineering intern sample company javascript react"><div class="company-mark company-violet">S</div><div class="job-main"><div class="job-label">SAMPLE LISTING · INTERNSHIP</div><h2>Software Engineering Intern</h2><div class="job-meta"><span>Sample Company</span><i>·</i><span>Hybrid</span><i>·</i><span>Example location</span></div><div class="tag-list"><span>JavaScript</span><span>React</span><span>Teamwork</span></div></div><button class="save-button" aria-label="Save Software Engineering Intern" aria-pressed="false">♡</button><button class="button button-secondary" data-toast="This is a sample card. Applications are not connected.">View details <span>→</span></button></article>
+              <article class="panel job-card" data-type="internship" data-location="remote" data-search="data analyst intern sample company sql analytics"><div class="company-mark company-blue">N</div><div class="job-main"><div class="job-label">SAMPLE LISTING · INTERNSHIP</div><h2>Data Analyst Intern</h2><div class="job-meta"><span>Northstar Example</span><i>·</i><span>Remote</span><i>·</i><span>Example location</span></div><div class="tag-list"><span>SQL</span><span>Spreadsheets</span><span>Communication</span></div></div><button class="save-button" aria-label="Save Data Analyst Intern" aria-pressed="false">♡</button><button class="button button-secondary" data-toast="This is a sample card. Applications are not connected.">View details <span>→</span></button></article>
+              <article class="panel job-card" data-type="entry" data-location="hybrid" data-search="junior frontend developer sample studio html css react"><div class="company-mark company-pink">F</div><div class="job-main"><div class="job-label">SAMPLE LISTING · ENTRY LEVEL</div><h2>Junior Frontend Developer</h2><div class="job-meta"><span>Fieldwork Studio</span><i>·</i><span>Hybrid</span><i>·</i><span>Example location</span></div><div class="tag-list"><span>HTML & CSS</span><span>React</span><span>Git</span></div></div><button class="save-button" aria-label="Save Junior Frontend Developer" aria-pressed="false">♡</button><button class="button button-secondary" data-toast="This is a sample card. Applications are not connected.">View details <span>→</span></button></article>
+            </div><p class="empty-state" id="jobs-empty" hidden>No sample opportunities match those filters.</p>
+          </section>
+
+          <section class="page-view" id="page-profile" aria-labelledby="profile-heading">
+            <div class="page-title-row"><div><div class="eyebrow">THE PERSON BEHIND THE PLAN</div><h1 id="profile-heading">Your profile</h1><p class="subheading">A snapshot of your interests, education, and direction.</p></div><button class="button button-primary" id="save-profile">Save changes</button></div>
+            <div class="profile-layout">
+              <article class="panel profile-card"><div class="profile-cover"><span>✦</span></div><div class="profile-avatar avatar">AM</div><h2>Alex Morgan</h2><p>Computer Science student</p><span class="profile-badge">✧ &nbsp;Future software developer</span><div class="profile-divider"></div><div class="profile-stat-row"><div><strong>12</strong><span>Skills</span></div><div><strong>3</strong><span>Projects</span></div><div><strong>68%</strong><span>Readiness</span></div></div></article>
+              <article class="panel profile-form"><div class="panel-heading"><div><h2>About you</h2><p>Your details help shape a more relevant experience.</p></div><span class="profile-lock">Private to you</span></div><div class="form-grid"><label class="form-field">First name<input value="Alex" aria-label="First name"></label><label class="form-field">Last name<input value="Morgan" aria-label="Last name"></label><label class="form-field">Education level<select><option>Undergraduate</option><option>Graduate</option><option>Other</option></select></label><label class="form-field">Area of study<input value="Computer Science" aria-label="Area of study"></label><label class="form-field">Learning time per day<select><option>About 1 hour</option><option>About 30 minutes</option><option>2+ hours</option></select></label><label class="form-field">Preferred work style<select><option>Flexible / hybrid</option><option>On-site</option><option>Remote</option></select></label></div><div class="form-field interests-field">Interests<div class="tag-list"><span>Building things <button aria-label="Remove Building things">×</button></span><span>Technology <button aria-label="Remove Technology">×</button></span><span>Creative problem-solving <button aria-label="Remove Creative problem-solving">×</button></span><button class="add-interest" data-toast="Interest editing is a visual prototype action.">＋ Add interest</button></div></div></article>
+            </div>
+          </section>
+          <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        </div>
+      </main>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
